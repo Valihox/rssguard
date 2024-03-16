@@ -30,15 +30,15 @@ jobs:
     strategy:
       matrix:
         os: [windows-2019]
-        no_lite: ["ON"]
+        no_lite: ["OFF"]
         use_qt5: ["OFF"]
         include:
           - os: windows-2019
             script_name: .\resources\scripts\github-actions\build-windows.ps1
-          - os: ubuntu-20.04
-            script_name: ./resources/scripts/github-actions/build-linux-mac.sh
-          - os: macos-11
-            script_name: ./resources/scripts/github-actions/build-linux-mac.sh
+          #- os: ubuntu-20.04
+          #  script_name: ./resources/scripts/github-actions/build-linux-mac.sh
+          #- os: macos-11
+          #  script_name: ./resources/scripts/github-actions/build-linux-mac.sh
         exclude:
           - os: ubuntu-20.04
             use_qt5: "OFF"
